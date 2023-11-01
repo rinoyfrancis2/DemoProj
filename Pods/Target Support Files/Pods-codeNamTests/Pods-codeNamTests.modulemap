@@ -1,0 +1,6 @@
+framework module Pods_codeNamTests {
+  umbrella header "Pods-codeNamTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
