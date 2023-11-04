@@ -13,6 +13,12 @@
 		889241482AEEA1270047D88F /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889241472AEEA1270047D88F /* CustomImageView.swift */; };
 		88BA87F62AF03584000425BF /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BA87F52AF03584000425BF /* Common.swift */; };
 		88BA87F92AF03802000425BF /* UICustomScrollController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BA87F82AF03802000425BF /* UICustomScrollController.swift */; };
+		88BA88002AF2B3B9000425BF /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BA87FF2AF2B3B9000425BF /* LoginViewModel.swift */; };
+		88BA88022AF2B3EA000425BF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BA88012AF2B3EA000425BF /* LoginViewController.swift */; };
+		88BA88042AF2B423000425BF /* EmployeeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BA88032AF2B423000425BF /* EmployeeListViewController.swift */; };
+		88BA88072AF2B443000425BF /* EmployeeListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BA88062AF2B443000425BF /* EmployeeListViewModel.swift */; };
+		88BA88092AF2B463000425BF /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BA88082AF2B463000425BF /* Employee.swift */; };
+		88BA880C2AF2C63A000425BF /* EmployeeListViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BA880B2AF2C63A000425BF /* EmployeeListViewHandler.swift */; };
 		88E89C412AEDC5220095A680 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E89C402AEDC5220095A680 /* AppDelegate.swift */; };
 		88E89C432AEDC5220095A680 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E89C422AEDC5220095A680 /* SceneDelegate.swift */; };
 		88E89C452AEDC5220095A680 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E89C442AEDC5220095A680 /* ViewController.swift */; };
@@ -53,6 +59,12 @@
 		889241472AEEA1270047D88F /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 		88BA87F52AF03584000425BF /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		88BA87F82AF03802000425BF /* UICustomScrollController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICustomScrollController.swift; sourceTree = "<group>"; };
+		88BA87FF2AF2B3B9000425BF /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		88BA88012AF2B3EA000425BF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		88BA88032AF2B423000425BF /* EmployeeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListViewController.swift; sourceTree = "<group>"; };
+		88BA88062AF2B443000425BF /* EmployeeListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListViewModel.swift; sourceTree = "<group>"; };
+		88BA88082AF2B463000425BF /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
+		88BA880B2AF2C63A000425BF /* EmployeeListViewHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListViewHandler.swift; sourceTree = "<group>"; };
 		88E89C3D2AEDC5220095A680 /* codeNam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = codeNam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88E89C402AEDC5220095A680 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88E89C422AEDC5220095A680 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,21 +121,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		889241442AEEA0C90047D88F /* ABC */ = {
+		889241442AEEA0C90047D88F /* List */ = {
 			isa = PBXGroup;
 			children = (
+				88BA88052AF2B429000425BF /* ViewController */,
 				8892414B2AEEACED0047D88F /* ViewModel */,
 				8892414A2AEEACDA0047D88F /* Model */,
 				889241492AEEACBB0047D88F /* View */,
 			);
-			path = ABC;
+			path = List;
 			sourceTree = "<group>";
 		};
 		889241492AEEACBB0047D88F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				889241452AEEA0F70047D88F /* CustomImageView.xib */,
-				889241472AEEA1270047D88F /* CustomImageView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -131,6 +142,7 @@
 		8892414A2AEEACDA0047D88F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				88BA88082AF2B463000425BF /* Employee.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -138,6 +150,8 @@
 		8892414B2AEEACED0047D88F /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				88BA88062AF2B443000425BF /* EmployeeListViewModel.swift */,
+				88BA880B2AF2C63A000425BF /* EmployeeListViewHandler.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -156,6 +170,56 @@
 				88BA87F82AF03802000425BF /* UICustomScrollController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		88BA87FA2AF2AC81000425BF /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				88BA87FE2AF2B389000425BF /* ViewModel */,
+				88BA87FD2AF2B374000425BF /* View */,
+				88BA87FB2AF2B34F000425BF /* ViewController */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		88BA87FB2AF2B34F000425BF /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				88BA88012AF2B3EA000425BF /* LoginViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		88BA87FD2AF2B374000425BF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				889241452AEEA0F70047D88F /* CustomImageView.xib */,
+				889241472AEEA1270047D88F /* CustomImageView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		88BA87FE2AF2B389000425BF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				88BA87FF2AF2B3B9000425BF /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		88BA88052AF2B429000425BF /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				88BA88032AF2B423000425BF /* EmployeeListViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		88BA880A2AF2BFEE000425BF /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 		88E89C342AEDC5220095A680 = {
@@ -183,9 +247,11 @@
 		88E89C3F2AEDC5220095A680 /* codeNam */ = {
 			isa = PBXGroup;
 			children = (
+				88BA880A2AF2BFEE000425BF /* Detail */,
+				88BA87FA2AF2AC81000425BF /* Login */,
 				88BA87F72AF037CB000425BF /* ViewControllers */,
 				88BA87F22AF0354E000425BF /* Common */,
-				889241442AEEA0C90047D88F /* ABC */,
+				889241442AEEA0C90047D88F /* List */,
 				88E89C402AEDC5220095A680 /* AppDelegate.swift */,
 				88E89C422AEDC5220095A680 /* SceneDelegate.swift */,
 				88E89C442AEDC5220095A680 /* ViewController.swift */,
@@ -224,7 +290,6 @@
 				06AAE842417C48FF31B93A4D /* Pods-codeNamTests.debug.xcconfig */,
 				C3DCD89C3F62BC1FA9C82D0C /* Pods-codeNamTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -432,9 +497,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88BA88072AF2B443000425BF /* EmployeeListViewModel.swift in Sources */,
 				88E89C452AEDC5220095A680 /* ViewController.swift in Sources */,
 				889241482AEEA1270047D88F /* CustomImageView.swift in Sources */,
 				88E89C412AEDC5220095A680 /* AppDelegate.swift in Sources */,
+				88BA88002AF2B3B9000425BF /* LoginViewModel.swift in Sources */,
+				88BA88022AF2B3EA000425BF /* LoginViewController.swift in Sources */,
+				88BA88092AF2B463000425BF /* Employee.swift in Sources */,
+				88BA880C2AF2C63A000425BF /* EmployeeListViewHandler.swift in Sources */,
+				88BA88042AF2B423000425BF /* EmployeeListViewController.swift in Sources */,
 				88BA87F62AF03584000425BF /* Common.swift in Sources */,
 				88E89C432AEDC5220095A680 /* SceneDelegate.swift in Sources */,
 				88BA87F92AF03802000425BF /* UICustomScrollController.swift in Sources */,

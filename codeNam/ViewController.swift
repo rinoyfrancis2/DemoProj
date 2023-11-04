@@ -9,7 +9,6 @@ import UIKit
 
 class ViewController: UICustomScrollController {
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         self.scrollView.backgroundColor = .red
@@ -22,18 +21,7 @@ class ViewController: UICustomScrollController {
         vvv.backgroundColor = .red
         return vvv
     }()
-    let customImageview2: CustomImageView = {
-        let vvv = CustomImageView()
-        vvv.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.width).isActive = true
-        vvv.backgroundColor = .red
-        return vvv
-    }()
-    let customImageview3: CustomImageView = {
-        let vvv = CustomImageView()
-        vvv.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.width).isActive = true
-        vvv.backgroundColor = .red
-        return vvv
-    }()
+    
     override func viewWillAppear(_ animated: Bool) {
         //
     }
