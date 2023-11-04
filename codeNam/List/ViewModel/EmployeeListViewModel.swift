@@ -4,9 +4,8 @@
 //
 //  Created by Rinoy Francis on 01/11/2023.
 //
-protocol EmployeeListViewModelProtocol {
+protocol EmployeeListViewModelDelegate {
     func getData(employees: Employee?)
-    func processedData(info: EmployeeElement?)
 }
 
 protocol EmployeeListViewModelFuncProtocol {
@@ -17,20 +16,25 @@ import Foundation
 
 class EmployeeListViewModel: EmployeeListViewModelFuncProtocol {
     
-    public var delegate: EmployeeListViewModelProtocol?
+    public var delegate: EmployeeListViewModelDelegate?
     public var dataHandler: ListViewHandler?
     
-    init(delegate: EmployeeListViewModelProtocol? = nil, dataHandler: ListViewHandler? = nil) {
+    init(delegate: EmployeeListViewModelDelegate? = nil) {
         self.delegate = delegate
-        self.dataHandler = dataHandler
-        //here we need to call the function for retrive the data from json
+        self.dataHandler = ListViewHandler()
+        self.dataHandler?.delegate = self
+        self.dataHandler?.LoadData()
     }
     
-    public func getEmployeeData() { // single emplee info
-        // handler with delegate pass
-        // when ever we got the data we pass through this delegate to
-        delegate?.getData(employees: []) // this is the item for communication with view and viewmodel onl
-        
-        //then we can
+    public func getEmployeeData() {
+        // when we press that will move to another detail page
+    }
+}
+
+extension EmployeeListViewModel: EmployeeListViewHandlerDelegate {
+    func EmployeeDetails(employees: Employee) {
+        DispatchQueue.main.async {
+            self.delegate?.getData(employees: employees)
+        }
     }
 }
