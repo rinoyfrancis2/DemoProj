@@ -15,22 +15,21 @@ class ListTableViewCell: UITableViewCell {
     @IBOutlet weak var ageLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     
-    let viewBorderColor = UIColor(red:0, green:0, blue:0, alpha:0.3)
-    let imageViewBorderColor = UIColor(red:10/255, green:200/255, blue:76/255, alpha:0.3)
+    let imageViewBackgroundColor = UIColor(red:158/255, green:81/255, blue:244/255, alpha:1)
 
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
         self.selectionStyle = .none
-        self.avatarImageView.layer.cornerRadius = 30
-        self.avatarImageView.layer.borderWidth = 2
-        self.avatarImageView.layer.borderColor = imageViewBorderColor.cgColor
+        self.avatarImageView.layer.cornerRadius = 40
+        self.avatarImageView.layer.borderWidth = 3
+        self.avatarImageView.layer.borderColor = UIColor.systemBackground.cgColor
         self.avatarImageView.layer.masksToBounds = true
         
-        self.backGroundView.layer.cornerRadius = 30
+        self.backGroundView.layer.cornerRadius = 15
         self.backGroundView.layer.borderWidth = 2
-        self.backGroundView.layer.borderColor = viewBorderColor.cgColor
+        self.backGroundView.layer.borderColor = UIColor.systemBackground.cgColor
+        self.backGroundView.backgroundColor = imageViewBackgroundColor
         self.backGroundView.layer.masksToBounds = true
         
         

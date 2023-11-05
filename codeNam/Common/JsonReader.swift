@@ -8,15 +8,13 @@
 import Foundation
 
 class JsonReader {
-    // make this one generic as results
-    // data shoukd be return
     
     static func readJSONFromFile(fileName: String, handler: (Data)->Void) {
         let path = Bundle.main.path(forResource: fileName, ofType: "json")
         let url = URL(fileURLWithPath: path!)
-        let sportsData = try? Data(contentsOf: url)
+        let actualData = try? Data(contentsOf: url)
         
-        if let data = sportsData {
+        if let data = actualData {
             handler(data)
         }
     }

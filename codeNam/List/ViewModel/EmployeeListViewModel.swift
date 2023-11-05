@@ -28,6 +28,7 @@ class EmployeeListViewModel: EmployeeListViewModelFuncProtocol {
     
     public func getEmployeeData() {
         // when we press that will move to another detail page
+        print("hai rinoy")
     }
 }
 

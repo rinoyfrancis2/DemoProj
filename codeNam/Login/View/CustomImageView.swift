@@ -7,12 +7,17 @@
 
 import UIKit
 
+protocol CustomImageViewDelegate {
+    func imagePressed()
+}
+
 class CustomImageView: UIView {
     
-    let nibName = "CustomImageView"
+    private let nibName = "CustomImageView"
     
     @IBOutlet weak var ImageVIew: UIImageView!
     @IBOutlet weak var contentView: UIView!
+    public var delegate: CustomImageViewDelegate?
     
     
     required init?(coder aDecoder: NSCoder) {
@@ -25,7 +30,7 @@ class CustomImageView: UIView {
         xibSetup()
     }
     
-    func xibSetup() {
+    private func xibSetup() {
         contentView = self.loadViewFromNib(nibName: nibName)
         ImageVIew.isUserInteractionEnabled = true
         contentView.frame = self.bounds
@@ -36,7 +41,7 @@ class CustomImageView: UIView {
     }
     
     @objc func tappedMap(sender: UITapGestureRecognizer) {
-        print("image tapped")
+        delegate?.imagePressed()
     }
     
 }

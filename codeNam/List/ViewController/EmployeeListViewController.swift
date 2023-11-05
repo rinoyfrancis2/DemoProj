@@ -48,7 +48,7 @@ extension EmployeeListViewController: UITableViewDataSource {
         if let age = self.employeeArray?[indexPath.row].age {
             cell.ageLabel.text = "Age: \(String(describing: age))"
         }
-            return cell
+        return cell
     }
 }
 

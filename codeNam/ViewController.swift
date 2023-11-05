@@ -16,10 +16,10 @@ class ViewController: UICustomScrollController {
     }
     
     let customImageview: CustomImageView = {
-        let vvv = CustomImageView()
-        vvv.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.width).isActive = true
-        vvv.backgroundColor = .red
-        return vvv
+        let imageView = CustomImageView()
+        imageView.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.width).isActive = true
+        imageView.backgroundColor = .red
+        return imageView
     }()
     
     override func viewWillAppear(_ animated: Bool) {
