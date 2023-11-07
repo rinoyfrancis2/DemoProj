@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol LoginViewControllerProtocol {
+    func goToEmployeeViewController()
+}
+
 class LoginViewController: UICustomScrollController {
     
     let customView: UIView = {
@@ -31,9 +35,8 @@ class LoginViewController: UICustomScrollController {
     }
     
     private func goToEmployeeViewController() {
-        let storyBoard: UIStoryboard = UIStoryboard(name: StoryBoard.Main.rawValue, bundle: nil)
-        let employeeListViewController = storyBoard.instantiateViewController(withIdentifier: Screens.employeeListViewController.rawValue) as! EmployeeListViewController
-        self.navigationController?.pushViewController(employeeListViewController, animated: true)
+        let viewController = NavigationManager().createViewController(screen: .employeeListViewController)
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
 }
 

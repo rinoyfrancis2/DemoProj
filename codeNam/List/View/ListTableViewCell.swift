@@ -15,9 +15,6 @@ class ListTableViewCell: UITableViewCell {
     @IBOutlet weak var ageLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     
-    let imageViewBackgroundColor = UIColor(red:158/255, green:81/255, blue:244/255, alpha:1)
-
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         self.selectionStyle = .none
@@ -31,8 +28,6 @@ class ListTableViewCell: UITableViewCell {
         self.backGroundView.layer.borderColor = UIColor.systemBackground.cgColor
         self.backGroundView.backgroundColor = imageViewBackgroundColor
         self.backGroundView.layer.masksToBounds = true
-        
-        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

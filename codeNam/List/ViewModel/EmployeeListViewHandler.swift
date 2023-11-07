@@ -24,7 +24,6 @@ class ListViewHandler: EmployeeListViewHandlerProtocol {
     }
     
     func LoadData() {
-        // write code for getting the data for the tableview
         JsonReader.readJSONFromFile(fileName: fileName) { data in
             delegate?.EmployeeDetails(employees: EmployeeElement.encordData(dataObject: data))
         }

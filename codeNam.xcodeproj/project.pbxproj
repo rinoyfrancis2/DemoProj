@@ -173,6 +173,7 @@
 		88BA87F22AF0354E000425BF /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				88BA88172AFA64A1000425BF /* NavigationManager.swift */,
 				88BA87F52AF03584000425BF /* Common.swift */,
 				88BA88112AF68B7C000425BF /* JsonReader.swift */,
 				88BA88192AFA67FD000425BF /* UIViewExtensions.swift */,
@@ -231,13 +232,6 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		88BA880A2AF2BFEE000425BF /* Detail */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Detail;
-			sourceTree = "<group>";
-		};
 		88BA88132AF68C36000425BF /* Asset File */ = {
 			isa = PBXGroup;
 			children = (
@@ -249,7 +243,6 @@
 		88BA88162AFA6490000425BF /* Singleton */ = {
 			isa = PBXGroup;
 			children = (
-				88BA88172AFA64A1000425BF /* NavigationManager.swift */,
 			);
 			path = Singleton;
 			sourceTree = "<group>";
@@ -281,7 +274,6 @@
 			children = (
 				88BA88162AFA6490000425BF /* Singleton */,
 				88BA88132AF68C36000425BF /* Asset File */,
-				88BA880A2AF2BFEE000425BF /* Detail */,
 				88BA87FA2AF2AC81000425BF /* Login */,
 				88BA87F72AF037CB000425BF /* ViewControllers */,
 				88BA87F22AF0354E000425BF /* Common */,

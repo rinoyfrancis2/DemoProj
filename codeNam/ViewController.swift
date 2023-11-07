@@ -7,20 +7,11 @@
 
 import UIKit
 
-class ViewController: UICustomScrollController {
+class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.scrollView.backgroundColor = .red
-        self.scrollViewContainer.addArrangedSubview(customImageview)
     }
-    
-    let customImageview: CustomImageView = {
-        let imageView = CustomImageView()
-        imageView.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.width).isActive = true
-        imageView.backgroundColor = .red
-        return imageView
-    }()
     
     override func viewWillAppear(_ animated: Bool) {
         //
