@@ -23,6 +23,8 @@
 		88BA88102AF66437000425BF /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88BA880E2AF66437000425BF /* ListTableViewCell.xib */; };
 		88BA88122AF68B7C000425BF /* JsonReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BA88112AF68B7C000425BF /* JsonReader.swift */; };
 		88BA88152AF6C86B000425BF /* Emp.json in Resources */ = {isa = PBXBuildFile; fileRef = 88BA88142AF6C86B000425BF /* Emp.json */; };
+		88BA88182AFA64A1000425BF /* NavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BA88172AFA64A1000425BF /* NavigationManager.swift */; };
+		88BA881A2AFA67FD000425BF /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BA88192AFA67FD000425BF /* UIViewExtensions.swift */; };
 		88E89C412AEDC5220095A680 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E89C402AEDC5220095A680 /* AppDelegate.swift */; };
 		88E89C432AEDC5220095A680 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E89C422AEDC5220095A680 /* SceneDelegate.swift */; };
 		88E89C452AEDC5220095A680 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E89C442AEDC5220095A680 /* ViewController.swift */; };
@@ -73,6 +75,8 @@
 		88BA880E2AF66437000425BF /* ListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
 		88BA88112AF68B7C000425BF /* JsonReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonReader.swift; sourceTree = "<group>"; };
 		88BA88142AF6C86B000425BF /* Emp.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Emp.json; sourceTree = "<group>"; };
+		88BA88172AFA64A1000425BF /* NavigationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationManager.swift; sourceTree = "<group>"; };
+		88BA88192AFA67FD000425BF /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		88E89C3D2AEDC5220095A680 /* codeNam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = codeNam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88E89C402AEDC5220095A680 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88E89C422AEDC5220095A680 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -171,6 +175,7 @@
 			children = (
 				88BA87F52AF03584000425BF /* Common.swift */,
 				88BA88112AF68B7C000425BF /* JsonReader.swift */,
+				88BA88192AFA67FD000425BF /* UIViewExtensions.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -241,6 +246,14 @@
 			path = "Asset File";
 			sourceTree = "<group>";
 		};
+		88BA88162AFA6490000425BF /* Singleton */ = {
+			isa = PBXGroup;
+			children = (
+				88BA88172AFA64A1000425BF /* NavigationManager.swift */,
+			);
+			path = Singleton;
+			sourceTree = "<group>";
+		};
 		88E89C342AEDC5220095A680 = {
 			isa = PBXGroup;
 			children = (
@@ -266,6 +279,7 @@
 		88E89C3F2AEDC5220095A680 /* codeNam */ = {
 			isa = PBXGroup;
 			children = (
+				88BA88162AFA6490000425BF /* Singleton */,
 				88BA88132AF68C36000425BF /* Asset File */,
 				88BA880A2AF2BFEE000425BF /* Detail */,
 				88BA87FA2AF2AC81000425BF /* Login */,
@@ -529,10 +543,12 @@
 				88BA88092AF2B463000425BF /* Employee.swift in Sources */,
 				88BA880C2AF2C63A000425BF /* EmployeeListViewHandler.swift in Sources */,
 				88BA88042AF2B423000425BF /* EmployeeListViewController.swift in Sources */,
+				88BA881A2AFA67FD000425BF /* UIViewExtensions.swift in Sources */,
 				88BA87F62AF03584000425BF /* Common.swift in Sources */,
 				88E89C432AEDC5220095A680 /* SceneDelegate.swift in Sources */,
 				88BA880F2AF66437000425BF /* ListTableViewCell.swift in Sources */,
 				88BA87F92AF03802000425BF /* UICustomScrollController.swift in Sources */,
+				88BA88182AFA64A1000425BF /* NavigationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

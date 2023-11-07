@@ -9,18 +9,6 @@ import UIKit
 
 class LoginViewController: UICustomScrollController {
     
-    let loginImageString: String = "Login"
-    let storyboardId: String = "EmployeeListViewController"
-    let storyBoardName: String = "Main"
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.scrollViewContainer.addArrangedSubview(customView)
-        self.scrollViewContainer.addArrangedSubview(customImageview)
-        customImageview.delegate = self
-
-    }
-    
     let customView: UIView = {
         let view = UIView()
         view.heightAnchor.constraint(equalToConstant: 100).isActive = true
@@ -30,16 +18,28 @@ class LoginViewController: UICustomScrollController {
     let customImageview: CustomImageView = {
         let customImageView = CustomImageView()
         customImageView.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.width).isActive = true
-        customImageView.ImageVIew.image = UIImage(named: "Login")
+        customImageView.ImageVIew.image = UIImage(named: imageString)
         return customImageView
     }()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.scrollViewContainer.addArrangedSubview(customView)
+        self.scrollViewContainer.addArrangedSubview(customImageview)
+        customImageview.delegate = self
+
+    }
+    
+    private func goToEmployeeViewController() {
+        let storyBoard: UIStoryboard = UIStoryboard(name: StoryBoard.Main.rawValue, bundle: nil)
+        let employeeListViewController = storyBoard.instantiateViewController(withIdentifier: Screens.employeeListViewController.rawValue) as! EmployeeListViewController
+        self.navigationController?.pushViewController(employeeListViewController, animated: true)
+    }
 }
 
 extension LoginViewController: CustomImageViewDelegate {
     func imagePressed() {
-        let storyBoard: UIStoryboard = UIStoryboard(name: storyBoardName, bundle: nil)
-        let employeeListViewController = storyBoard.instantiateViewController(withIdentifier: storyboardId) as! EmployeeListViewController
-        self.navigationController?.pushViewController(employeeListViewController, animated: true)
+        self.goToEmployeeViewController()
     }
 
 }

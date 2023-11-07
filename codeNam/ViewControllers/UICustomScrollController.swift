@@ -19,18 +19,6 @@ class UICustomScrollController: UIViewController {
         return UIScreen.main.bounds.height
     }
     
-    // Screen safeare
-//    private var _safeArea: Bool = true
-//    
-//    public var isSafeAreaNeeded: Bool {
-//        get {
-//            return _safeArea
-//        }
-//        set (newVal) {
-//            _safeArea = newVal
-//        }
-//    }
-    
     public let scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.translatesAutoresizingMaskIntoConstraints = false
